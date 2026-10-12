@@ -1,0 +1,355 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --yellow: #FFC83D;
+    --yellow-hover: #F2B91F;
+    --navy: #17243A;
+    --background: #FAFAF7;
+    --white: #FFFFFF;
+    --gray: #697386;
+    --border: #E5E7EB;
+    --green: #167341;
+    --red: #B42318;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito Sans', Arial, sans-serif;
+    background: var(--background);
+    color: var(--navy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.navbar {
+    min-height: 76px;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--navy);
+}
+
+.bee {
+    color: #D99A00;
+    font-size: 29px;
+}
+
+.nav-text {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.page-container {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    padding: 55px 24px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 940px;
+    min-height: 560px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 16px 45px rgba(23, 36, 58, 0.08);
+}
+
+.auth-intro {
+    padding: 48px 36px;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bee-icon {
+    width: 64px;
+    height: 64px;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    background: var(--yellow);
+    color: var(--navy);
+    font-size: 34px;
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.auth-intro h1,
+.welcome-card h1 {
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.auth-intro > p:last-child {
+    color: #D5DBE5;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.form-area {
+    padding: 35px 40px;
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+    background: #F1F3F6;
+    border-radius: 12px;
+    margin-bottom: 28px;
+}
+
+.tab {
+    padding: 11px;
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--gray);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.tab.active {
+    background: var(--yellow);
+    color: var(--navy);
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.show {
+    display: block;
+}
+
+.auth-form h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.form-description {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 23px;
+}
+
+.auth-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 15px 0 7px;
+}
+
+.auth-form input {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background: #FFFFFF;
+    color: var(--navy);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-form input::placeholder {
+    color: #9AA2B1;
+}
+
+.auth-form input:focus {
+    border-color: #D9A400;
+    box-shadow: 0 0 0 3px rgba(255, 200, 61, 0.22);
+}
+
+.primary-btn {
+    width: 100%;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 23px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: var(--yellow);
+    color: var(--navy);
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.primary-btn:hover {
+    background: var(--yellow-hover);
+    transform: translateY(-1px);
+}
+
+.switch-text {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.text-btn {
+    border: none;
+    background: none;
+    color: #8A6500;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.text-btn:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    padding: 13px 16px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.alert ul {
+    padding-left: 18px;
+}
+
+.error {
+    background: #FEF3F2;
+    color: var(--red);
+    border: 1px solid #FECDCA;
+}
+
+.welcome-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 42px;
+    text-align: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: 0 16px 45px rgba(23, 36, 58, 0.08);
+}
+
+.welcome-card .bee-icon {
+    margin: 0 auto 24px;
+}
+
+.welcome-card > p {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+.email-text {
+    margin-top: 8px;
+    overflow-wrap: anywhere;
+}
+
+.footer {
+    padding: 24px 16px;
+    text-align: center;
+    color: var(--gray);
+    font-size: 12px;
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .page-container {
+        padding: 28px 16px;
+    }
+
+    .auth-card {
+        max-width: 480px;
+        grid-template-columns: 1fr;
+        border-radius: 18px;
+    }
+
+    .auth-intro {
+        padding: 28px 25px;
+    }
+
+    .auth-intro .bee-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 27px;
+        margin-bottom: 18px;
+    }
+
+    .auth-intro h1 {
+        font-size: 28px;
+    }
+
+    .auth-intro > p:last-child {
+        font-size: 14px;
+    }
+
+    .form-area {
+        padding: 28px 22px;
+    }
+
+    .welcome-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
